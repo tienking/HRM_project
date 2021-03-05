@@ -1,0 +1,55 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-4">
+					<h2 class="heading-section">Department List</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="h5 mb-4 text-center">All Departments</h3>
+					{% if department_list %}
+					<div class="table-wrap">
+						<table class="table">
+							<thead class="thead-primary">
+								<tr>
+									<th>&nbsp;</th>
+									<th>Name</th>
+									<th>Description</th>
+									<th>&nbsp;</th>
+								</tr>
+							</thead>
+							<tbody>
+							{% for department in department_list %}
+							<tr class="alert" role="alert">
+								<td>
+									<label class="checkbox-wrap checkbox-primary">
+										<input type="checkbox" checked>
+										<span class="checkmark"></span>
+									</label>
+								</td>
+								<td>{{ department.dep_name }}</td>
+								<td>{{ department.dep_description }}</td>
+								<td>
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true"><i class="fa fa-close"></i></span>
+									</button>
+								</td>
+							</tr>
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+					{% else %}
+					<p>There are no departments.</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+{% endblock %}

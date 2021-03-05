@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 style="text-align:center">Human Resource Management</h1>
+
+<div class="header">
+	<h2>Information</h2>
+</div>
+
+<div class="content">
+	<h3>Employees: {{ num_employees }}</h3>
+	<p>Available Employees: {{ num_available_employees }}</p>
+	<p>Working Employees: {{ num_working_employees }}</p>
+</div>
+{% endblock %}
