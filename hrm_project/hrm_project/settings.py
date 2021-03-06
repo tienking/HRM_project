@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Add-in django application
-    'djmoney',
     # New application
     'hrapp.apps.HrappConfig',
 ]

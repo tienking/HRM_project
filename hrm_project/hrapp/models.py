@@ -107,28 +107,3 @@ class Employee(models.Model):
         return f'{self.first_name} {self.middle_name} {self.last_name}'
 
 # -------------------------------------------------------------------------------
-
-# Create a new reocrd using the model's contructor
-# record = MyModelName(username="Test Name",password="123",email="test@mail.com")
-
-# Access model filed values using Python attributes
-# print(record.id) # should return 1 for the first record
-# print(record.username)
-# print(record.password)
-# print(record.email)
-
-# Change record by modifying the fields, then calling save()
-# record.username = "New name"
-
-# Save the object into the database
-# record.save()
-
-# all_user = User.objects.all()
-# Filter by format: field_name__match_type
-# icontains (case insensitive)
-# iexact (case-insensitive exact match)
-# exact (case-sensitive exact)
-# in, gt (greater than)
-# startswith
-# gmail_user = User.objects.filter(email__contains="gmail')
-# number_gmail_users = gmail_user.count()
